@@ -7,20 +7,23 @@ function Contador() {
         setContador(contador + 1);
     }
 
+    const button = <button onClick={addContador} children="Clique me" />
+
     return (
         <div>
-            <span>
-                {contador}
-            </span>
-            <span>
-                <button onClick={addContador} children="Clique me" />
-            </span>
+            <h2 children={contador} />
+            <div children={button} />
         </div>
     );
 }
 
 function Home() {
-    return <h1>Hello World <Contador /></h1>
+    return (
+        <div>
+            <h1 children="Hello World" />
+            <Contador />
+        </div>
+    );
 }
 
 export default Home;
